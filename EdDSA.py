@@ -175,6 +175,10 @@ if __name__ == "__main__":
     # Verification Operation
     print(f"======================== Verification operation at the receiver side:")
     print(f" ")
+
+    # Start memory tracking for verification
+    tracemalloc.start()
+
     received_message = input("Enter the message received: ")
     received_message_int = text2int(received_message)
     print(f" ")
@@ -200,6 +204,11 @@ if __name__ == "__main__":
         print(f"The Signature is valid")
     else:
         print(f"The signature is invalid")
+
+    # Measure peak memory usage for verification
+    current, peak = tracemalloc.get_traced_memory()
+    print(f"Current memory usage during verification: {current / 1024:.2f} KB")
+    print(f"Peak memory usage during verification: {peak / 1024:.2f} KB")
 
     # Stop memory tracking
     tracemalloc.stop()
