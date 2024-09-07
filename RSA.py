@@ -1,7 +1,3 @@
-# The 288 byte message that we signed and verified in our test in our research is:  
-# The wisdom of today: Surround yourself with people whose eyes light 
-# up when they see you coming, slowly is the fastest way to get to 
-# where you want to be, and the top of one mountain is the bottom of the next _ so keep climbing.
 import time
 import tracemalloc
 from Crypto.PublicKey import RSA
